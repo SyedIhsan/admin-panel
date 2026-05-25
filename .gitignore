@@ -9,6 +9,7 @@ demo/db-config.php
 # Demo runtime data
 demo/mail-outbox/*.html
 demo/mail-outbox/
+demo/reset.log
 
 # Generated / backup
 *.sql.bak

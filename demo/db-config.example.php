@@ -22,9 +22,13 @@ declare(strict_types=1);
 
 return [
     'host'    => 'localhost',
-    'name'    => 'sdc_demo',
-    'user'    => 'root',
-    'pass'    => '',
+    'name'    => 'your_db_name',
+    'user'    => 'your_db_user',
+    'pass'    => 'your_db_pass',
     'charset' => 'utf8mb4',
     'port'    => 3306,
+
+    // Token for the web-triggered reset endpoint (demo/reset.php?token=...).
+    // Generate with: php -r "echo bin2hex(random_bytes(16));"
+    'reset_token' => 'replace-with-your-own-token',
 ];
