@@ -17,6 +17,7 @@ demo/reset.log
 *.sql.bak
 *.log
 backup/
+_deploy/
 
 # Editor / OS
 .vscode/
