@@ -1,0 +1,34 @@
+# Secrets & credentials — NEVER commit
+demo/db-config.php
+.env
+.env.local
+*.pem
+*.key
+**/secure/
+
+# Demo runtime data
+demo/mail-outbox/*.html
+demo/mail-outbox/
+
+# Generated / backup
+*.sql.bak
+*.log
+backup/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Dependency directories (in case anyone adds them later)
+node_modules/
+vendor/
+
+# Original archived WordPress files (per PROJECT_STRUCTURE.md note 13)
+\#wp-*
+
+# Audit reports (regenerated each run)
+DEMO_AUDIT.md

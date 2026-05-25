@@ -1,0 +1,13 @@
+# Block .env from public access
+<Files ".env">
+  Require all denied
+</Files>
+
+<FilesMatch "^\.env">
+  Require all denied
+</FilesMatch>
+
+# (Optional) block other sensitive files
+<FilesMatch "\.(log|ini|bak|sql|zip|tar|gz)$">
+  Require all denied
+</FilesMatch>

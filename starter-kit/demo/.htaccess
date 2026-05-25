@@ -1,0 +1,28 @@
+# Demo site .htaccess — InfinityFree compatible
+# Place this in the web root (the folder you FTP to /htdocs)
+
+# Disable directory listing
+Options -Indexes
+
+# Block access to config / secret / git files
+<FilesMatch "(^\.|composer\.(json|lock)|package(-lock)?\.json|\.example\.php|db-config\.php|\.gitignore|\.md)$">
+    Require all denied
+</FilesMatch>
+
+# Block the demo folder from being browsed (mail outbox, reset script, seed files)
+RewriteEngine On
+RewriteRule ^demo/(seed|schema|reset|db-config) - [F,L]
+
+# Default landing
+DirectoryIndex index.php
+
+# Prevent PHP execution in upload folders (if you create any)
+<Directory "uploads">
+    <FilesMatch "\.(php|phtml|phar)$">
+        Require all denied
+    </FilesMatch>
+</Directory>
+
+# Force HTTPS (InfinityFree provides free SSL)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

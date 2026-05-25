@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <circle cx="400" cy="200" r="100" fill="#f59e0b" opacity="0.12"/>
+  <circle cx="400" cy="200" r="60" fill="#f59e0b" opacity="0.25"/>
+  <polygon points="400,165 435,207 421,207 421,235 379,235 379,207 365,207" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round"/>
+  <text x="400" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="26" font-weight="700" fill="#f59e0b" text-anchor="middle" letter-spacing="6">PRODUCT</text>
+  <text x="400" y="362" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#475569" text-anchor="middle">Business Bootcamp · Placeholder 3</text>
+</svg>

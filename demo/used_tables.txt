@@ -1,0 +1,41 @@
+# Tables referenced in PHP codebase
+# Generated: 2026-05-22 — Phase 3 Step 2
+# Case reflects actual SQL strings used in code (MySQL is case-insensitive on most hosts, but listed as-used)
+
+admins
+courses
+course_certificates
+course_ebooks
+course_notify_jobs
+course_videos
+course_waitlist
+course_workbooks
+Discount_Codes
+Discount_Redemptions
+email_audience_group_imports
+email_audience_group_members
+email_audience_groups
+email_campaign_imports
+email_campaign_link_clicks
+email_campaign_queue_jobs
+email_campaign_recipients
+email_campaign_schedules
+email_campaign_send_batches
+email_campaigns
+email_logs
+email_templates
+Orders
+Payment
+Product_Categories
+Products
+sdc_webinar_marketing_emails
+sdc_webinar_marketing_logs
+sdc_webinar_registrations
+sdc_webinar_reminders
+sdc_webinars
+Subscription_Action_Tokens
+Subscription_Billing_History
+Subscriptions
+user
+user_progress
+user_workbooks

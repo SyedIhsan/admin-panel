@@ -1,0 +1,23 @@
+body{font-family:'Inter',sans-serif;}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeIn .5s ease both; }
+
+.sidebar-scrollbar-hidden {
+  -ms-overflow-style: none;   /* IE / Edge */
+}
+
+.sidebar-scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;              /* Chrome / Safari */
+}
+
+@supports (scrollbar-width: none) {
+  .sidebar-scrollbar-hidden {
+    scrollbar-width: none;    /* Firefox 64+ */
+  }
+}

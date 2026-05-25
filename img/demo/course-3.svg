@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#0f172a"/>
+  <circle cx="400" cy="200" r="100" fill="#10b981" opacity="0.12"/>
+  <circle cx="400" cy="200" r="60" fill="#10b981" opacity="0.22"/>
+  <rect x="362" y="172" width="76" height="56" rx="4" fill="none" stroke="#10b981" stroke-width="3"/>
+  <polyline points="370,200 385,215 415,185 435,205" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="370" cy="200" r="3" fill="#10b981"/>
+  <circle cx="385" cy="215" r="3" fill="#10b981"/>
+  <circle cx="415" cy="185" r="3" fill="#10b981"/>
+  <circle cx="435" cy="205" r="3" fill="#10b981"/>
+  <text x="400" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="26" font-weight="700" fill="#10b981" text-anchor="middle" letter-spacing="6">COURSE</text>
+  <text x="400" y="362" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#475569" text-anchor="middle">Analytics and Data Insights · Placeholder 3</text>
+</svg>
