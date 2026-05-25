@@ -31,6 +31,5 @@ vendor/
 # Original archived WordPress files (per PROJECT_STRUCTURE.md note 13)
 \#wp-*
 
-# Audit reports (regenerated each run)
-DEMO_AUDIT.md
+# Audit reports
 
