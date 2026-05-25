@@ -56,13 +56,15 @@ $mysqli->set_charset($cfg['charset'] ?? 'utf8mb4');
 
 $startedAt = date('c');
 
-// ── 1. Drop all existing tables ────────────────────────────────────────────────
+// ── 1. Drop all existing tables and views ─────────────────────────────────────
 $mysqli->query("SET FOREIGN_KEY_CHECKS = 0");
-$res = $mysqli->query("SHOW TABLES");
+$res = $mysqli->query("SHOW FULL TABLES");
 $dropped = 0;
 while ($row = $res->fetch_array(MYSQLI_NUM)) {
-    $tbl = $row[0];
-    if ($mysqli->query("DROP TABLE IF EXISTS `{$tbl}`")) {
+    $tbl  = $row[0];
+    $type = strtoupper($row[1] ?? 'BASE TABLE');
+    $ddl  = $type === 'VIEW' ? "DROP VIEW IF EXISTS `{$tbl}`" : "DROP TABLE IF EXISTS `{$tbl}`";
+    if ($mysqli->query($ddl)) {
         $dropped++;
     }
 }

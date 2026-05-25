@@ -180,16 +180,20 @@ CREATE TABLE `Orders` (
     KEY `idx_orders_transaction_id` (`transaction_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- order_products: maps Orders cols to legacy names expected by progress.php
-CREATE OR REPLACE VIEW `order_products` AS
-SELECT  id,
-        email       AS customer_email,
-        status,
-        product_name,
-        amount,
-        NULL        AS product_type,
-        created_at
-FROM `Orders`;
+-- order_products: compatibility table for progress.php (VIEW not available on shared hosts)
+-- Populated from Orders during seed; product_type reserved for non-Orders sources.
+CREATE TABLE `order_products` (
+    `id`             BIGINT UNSIGNED NOT NULL,
+    `customer_email` VARCHAR(190)    NULL,
+    `status`         VARCHAR(20)     NULL,
+    `product_name`   VARCHAR(255)    NULL,
+    `amount`         DECIMAL(10,2)   NULL,
+    `product_type`   VARCHAR(60)     NULL,
+    `created_at`     DATETIME        NULL,
+    PRIMARY KEY (`id`),
+    KEY `idx_op_email`  (`customer_email`),
+    KEY `idx_op_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Discount_Codes — includes renewal/retention snapshot columns
 CREATE TABLE `Discount_Codes` (

@@ -175,6 +175,14 @@ VALUES
 ('ORD-0019','5','5', NULL, 'Premium Coaching Bundle', 'Premium Coaching Bundle',  99.00,  99.00, 'Nina Demo', 'nina@demo.local',   '+60111000014', 'live','pending', '', '2026-05-10 14:00:00', 'DEMO-SP-D9E0F1A2', NULL, 0.00, NULL, '{"gateway":"demo","ip":"127.0.0.1","ua":"Demo Browser"}', NULL, 'installment', 0);
 
 -- =============================================================================
+-- ORDER_PRODUCTS (denormalised snapshot populated from Orders)
+-- =============================================================================
+
+INSERT INTO `order_products` (`id`, `customer_email`, `status`, `product_name`, `amount`, `product_type`, `created_at`)
+SELECT `id`, `email`, `status`, `product_name`, `amount`, NULL, `created_at`
+FROM `Orders`;
+
+-- =============================================================================
 -- DISCOUNT REDEMPTIONS
 -- =============================================================================
 
