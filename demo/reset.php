@@ -28,8 +28,14 @@ $cfg = require __DIR__ . '/db-config.php';
 
 // Token check for web access (CLI bypasses this)
 if (PHP_SAPI !== 'cli') {
-    // Prefer env var; fall back to db-config key; empty string = deny all
-    $expectedToken = getenv('DEMO_RESET_TOKEN') ?: ($cfg['reset_token'] ?? '');
+    // Priority: env.prod.php > DEMO_RESET_TOKEN env var > db-config reset_token key
+    $envFile = __DIR__ . '/env.prod.php';
+    if (file_exists($envFile)) {
+        $env = require $envFile;
+        $expectedToken = (string)($env['DEMO_RESET_TOKEN'] ?? '');
+    } else {
+        $expectedToken = getenv('DEMO_RESET_TOKEN') ?: ($cfg['reset_token'] ?? '');
+    }
     $providedToken = (string)($_GET['token'] ?? '');
 
     if ($expectedToken === '' || !hash_equals($expectedToken, $providedToken)) {

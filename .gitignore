@@ -1,5 +1,7 @@
 # Secrets & credentials — NEVER commit
 demo/db-config.php
+demo/db-config.prod.php
+demo/env.prod.php
 .env
 .env.local
 *.pem
