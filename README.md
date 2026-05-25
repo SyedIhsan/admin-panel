@@ -1,4 +1,4 @@
-# SDC Admin Dashboard — Portfolio Demo
+# Admin Panel — Demo
 
 > **This is a sanitized demo** of a production PHP admin panel I built for an online education and digital products business. All credentials, customer data, payment integrations, and external API connections have been replaced with mocks. No real charges, emails, or data flows.
 
@@ -68,4 +68,4 @@ A multi-module admin panel for managing:
 
 ---
 
-*Built by [Your Name](https://yourportfolio.com)*
+*Built by [Syed Ihsan]*
