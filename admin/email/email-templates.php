@@ -381,10 +381,21 @@ if (isset($_GET['saved'])) {
         </div>
       </div>
     <?php elseif (count($rows) === 0): ?>
-      <div class="p-20 text-center">
-        <h3 class="text-lg font-semibold text-gray-800">No templates found</h3>
-        <p class="text-gray-500 mb-6">Start by creating your first email template.</p>
-        <a href="/admin/email/custom-email.php" class="text-yellow-700 font-bold hover:underline">Create a template</a>
+      <div class="p-16 text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-slate-100 flex items-center justify-center">
+          <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-black text-slate-900 mb-2">No templates yet</h3>
+        <p class="text-sm text-slate-500 font-semibold mb-6">Create your first email template to use in campaigns and triggers.</p>
+        <a href="/admin/email/custom-email.php"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-yellow-500 text-white font-black hover:bg-yellow-400 transition shadow">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/>
+          </svg>
+          Create First Template
+        </a>
       </div>
     <?php else: ?>
       <div class="overflow-x-auto">

@@ -161,7 +161,17 @@ include __DIR__ . "/../partials/nav.php";
                 <tbody class="divide-y divide-slate-50">
                     <?php if (empty($registrations)): ?>
                         <tr>
-                            <td colspan="6" class="px-8 py-12 text-center text-slate-400 font-bold">No participants found.</td>
+                            <td colspan="6" class="px-8 py-16 text-center">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-14 h-14 bg-slate-50 rounded-full flex items-center justify-center mb-3">
+                                        <svg class="w-7 h-7 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-slate-900 font-black text-sm">No participants yet</p>
+                                    <p class="text-slate-400 text-xs font-semibold mt-1">Registrations will appear here once attendees sign up.</p>
+                                </div>
+                            </td>
                         </tr>
                     <?php else: ?>
                         <?php foreach ($registrations as $r): ?>
