@@ -21,7 +21,7 @@
 ">
     <span><b>DEMO MODE</b></span>
     <span>All data is sample-only &middot; No real charges or emails sent &middot; Resets daily</span>
-    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" rel="noopener"
+    <a href="https://github.com/SyedIhsan/admin-panel" target="_blank" rel="noopener"
        style="background: rgba(255,255,255,0.2); padding: 2px 10px; border-radius: 4px; color: white; text-decoration: none; font-size: 12px;">
         View Source &uarr;
     </a>
