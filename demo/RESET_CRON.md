@@ -1,5 +1,10 @@
 # Nightly Demo Reset — cron-job.org Setup
 
+**Status: confirmed working as of 2026-05-26**
+Schedule: daily 04:00 UTC — cron-job.org free tier, 30 s timeout (reset runs in ~3 s)
+
+---
+
 The demo resets nightly at 4 AM MYT (Asia/Kuala_Lumpur) by calling
 `demo/reset.php` with a secret token. This document covers how to configure
 the cron job and verify it works.
@@ -62,7 +67,7 @@ cron-job.org is free and requires no credit card.
    | **Hours** | `20` (UTC) = 4 AM MYT (+08:00) |
    | **Minutes** | `0` |
    | **Request method** | GET |
-   | **Timeout** | 60 seconds |
+   | **Timeout** | 30 seconds (free tier max — sufficient, reset runs in ~3 s) |
 
 4. Under **Notifications** → enable email on failure (so you know if the reset breaks).
 5. Click **Create**.
