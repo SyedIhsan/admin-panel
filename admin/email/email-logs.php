@@ -75,9 +75,10 @@ if ($logTable !== null) {
     $sql = "SELECT " . implode(', ', $select) . " FROM `{$logTable}` WHERE 1=1";
     
     // Environment-based filtering (Real vs Test)
+    // DEMO_MODE: show all rows regardless of email domain (all seed data uses test addresses)
     $envWhere = "1=1";
     $recCol = $map['recipient'];
-    if ($recCol !== null) {
+    if ($recCol !== null && !(defined('DEMO_MODE') && DEMO_MODE === true)) {
       if (IS_LOCALHOST) {
         // Show only test emails on localhost
         $envWhere = "(`{$recCol}` LIKE '%@demo.local' OR `{$recCol}` LIKE '%test%')";
