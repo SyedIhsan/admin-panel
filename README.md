@@ -2,7 +2,7 @@
 
 > This is a sanitized demo of a production PHP admin panel I built for an online education and digital products business. All credentials, customer data, payment integrations, and external API connections have been replaced with stubs. No real charges are made, no real emails are sent, and no real customer data is stored.
 
-**Live demo:** [demo-panel.infinityfreeapp.com/admin](https://demo-panel.infinityfreeapp.com/admin)
+**Live demo:** [demo-panel.infinityfreeapp.com](https://demo-panel.infinityfreeapp.com)
 **Login:** `demo_admin` / `demo123` — auto-fill button on the login page
 **Source:** [github.com/SyedIhsan/admin-panel](https://github.com/SyedIhsan/admin-panel)
 
