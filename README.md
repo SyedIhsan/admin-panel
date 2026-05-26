@@ -2,7 +2,7 @@
 
 > **This is a sanitized demo** of a production PHP admin panel I built for an online education and digital products business. All credentials, customer data, payment integrations, and external API connections have been replaced with mocks. No real charges, emails, or data flows.
 
-**Live demo:** [https://YOUR-SUBDOMAIN.infinityfreeapp.com](https://YOUR-SUBDOMAIN.infinityfreeapp.com)
+**Live demo:** [https://demo-panel.infinityfreeapp.com](https://demo-panel.infinityfreeapp.com)
 **Login:** `demo_admin` / `demo123` (auto-fill button on login page)
 **Source:** This repo
 
